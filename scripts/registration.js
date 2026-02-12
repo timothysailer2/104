@@ -22,9 +22,20 @@ let pet3 = {
     service: "Checkup",
     breed: "Bulldog"
 };
-
+// Constructor for pets
+function Pet(name, age, breed, gender, service) {
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.gender = gender;
+    this.service = service;
+}
 // Array to store pets
 let petsList = [pet1, pet2, pet3];
+// Creating 3 new pets
+let pet4 = new Pet("Buddy", 3, "Golden Retriever", "Male", "Grooming");
+let pet5 = new Pet("Luna", 2, "Siamese Cat", "Female", "Vaccination");
+let pet6 = new Pet("Rocky", 5, "Bulldog", "Male", "Nail Trim");
 
 // Function to display pet names
 function displayPets() {
@@ -38,19 +49,8 @@ function displayPets() {
     }
 }
 
-// Constructor for pets
-function Pet(name, age, breed, gender, service) {
-    this.name = name;
-    this.age = age;
-    this.breed = breed;
-    this.gender = gender;
-    this.service = service;
-}
 
-// Creating 3 new pets
-let pet4 = new Pet("Buddy", 3, "Golden Retriever", "Male", "Grooming");
-let pet5 = new Pet("Luna", 2, "Siamese Cat", "Female", "Vaccination");
-let pet6 = new Pet("Rocky", 5, "Bulldog", "Male", "Nail Trim");
+
 
 
 
