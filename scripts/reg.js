@@ -1,6 +1,8 @@
 //id the form
 const productForm = document.querySelector("form"); //search html element
 
+//id the body
+const body = document.getElementById("body");
 //def constructor
 function Product(name, price, category){
     this.name = name;
@@ -22,4 +24,13 @@ function registerProduct(event){
    console.log(newProduct);
 
    //use info - create row on table
+   const row = document.createElement("tr");
+
+   row.innerHTML = `
+   <td>${newProduct.name}</td>
+   <td>${newProduct.price}</td>
+   <td>${newProduct.category}</td>
+   <td>${<button class="btn btn-danger">Delete</button>}</td>
+   `;
+   body.appendChild(row)
 }

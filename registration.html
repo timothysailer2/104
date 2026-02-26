@@ -1,75 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>Pet Registration</title>
+<meta charset="UTF-8">
+<title>Pet Registration</title>
+
+<!-- ✅ Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
-<body onload="displayPets()">
-    <header>
-         <nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="./index.html">The Fashion Pet</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="./about.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="./registration.html">Registration</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="./services.html">Services</a>
-        </li>
-       </ul>
+
+<body class="container mt-4">
+
+<h1 class="text-center">Pet Salon</h1>
+
+<!-- Registered Pets -->
+<section>
+    <h2>Registered Pets</h2>
+
+    <div>
+        <ol id="petsNames"></ol>
     </div>
-  </div>
-</nav>
-    </header>
+</section>
+<section class="mt-4">
 
-    <section>
-        <h1>Registration</h1>
-        <h2>Registered Pets</h2>
-        <div>
-            <ol id="petsList"></ol>
-        </div>
-    </section>
-    <section class="reg"> <h2>Registration</h2> 
-        <form id="petForm" class="border p-4 rounded bg-light"> 
-            <div class="mb-3"> 
-                <label class="form-label">Pet Name</label> 
-                <input type="text" id="petName" class="form-control" required> 
-            </div> 
-            <div class="mb-3"> 
-                <label class="form-label">Age</label> <input type="number" id="petAge" class="form-control" required> 
-            </div> 
-            <div class="mb-3"> 
-                <label class="form-label">Breed</label> 
-                <input type="text" id="petBreed" class="form-control" required> 
-            </div> 
-            <div class="mb-3"> 
-                <label class="form-label">Gender</label> 
-                <select id="petGender" class="form-select" required> 
-                    <option value="">Select gender</option> 
-                    <option>Male</option> <option>Female</option> 
-                </select> 
-            </div> 
-            <div class="mb-3"> 
-                <label class="form-label">Service</label> 
-                <input type="text" id="petService" class="form-control" required> 
-            </div> 
-            
-            <div class="d-flex justify-content-end">
-            <button type="submit" class="btn btn-primary">Register</button> 
-            <button type="reset" class="btn btn-secondary">Reset</button> 
-            </div>
-        </form> 
-    </section>
+    <h2>Registered Pets</h2>
 
-    <!-- Link JavaScript file -->
-    <script src="./scripts/registration.js"></script>
+    <table class="table table-striped table-hover table-bordered">
+
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Breed</th>
+                <th>Gender</th>
+                <th>Service</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+
+        <tbody id="petsTableBody">
+            <!-- Pets appear here -->
+        </tbody>
+
+    </table>
+
+</section>
+
+
+<!-- ✅ Registration Section -->
+<section class="mt-5">
+
+<h2>Registration</h2>
+
+<form class="card p-4 shadow">
+
+    <div class="mb-3">
+        <label class="form-label">Pet Name</label>
+        <input type="text" class="form-control" id="petName">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Age</label>
+        <input type="number" class="form-control" id="petAge">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Breed</label>
+        <input type="text" class="form-control" id="petBreed">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Gender</label>
+        <select class="form-control" id="petGender">
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Service</label>
+        <input type="text" class="form-control" id="petService">
+    </div>
+
+   <button type="button" class="btn btn-primary" onclick="registerPet()">
+    Register
+</button>
+
+    <button type="reset" class="btn btn-secondary">
+        Reset
+    </button>
+
+</form>
+
+</section>
+
+<script src="./scripts/registration.js"></script>
+
 </body>
 </html>

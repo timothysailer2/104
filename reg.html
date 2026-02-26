@@ -14,8 +14,27 @@
 </div>
 <div class="mb-3">
   <label for="formGroupExampleInput2" class="form-label">Another label</label>
-  <input type="text" onclick="registerProduct(event)" class="form-control" name="formGroupExampleInput2" placeholder="Another input placeholder">
+  <input type="text"  class="form-control" name="formGroupExampleInput2" placeholder="Another input placeholder">
 </div>
-    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+    <button type="button" class="btn btn-primary btn-lg" onclick="registerProduct(event)">Large button</button>
+    <section>
+        <h2>Products</h2>
+        <table>
+            <!--Header-->
+            <tr>
+                <th>name</th>
+                <th>price</th>
+                <th>Category</th>
+                <th>delete</th>
+
+            </tr>
+            <!--Body-->
+            <tbody id="body">
+                
+            </tbody>
+
+        </table>
+    </section>
+    
 </body>
 </html>
