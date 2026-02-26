@@ -24,7 +24,7 @@ let pet3 = {
 };
 
 
-// ✅ Constructor
+// Constructor
 function Pet(name, age, breed, gender, service){
     this.name = name;
     this.age = age;
@@ -34,13 +34,13 @@ function Pet(name, age, breed, gender, service){
 }
 
 
-// ✅ Pets created using constructor
+// Pets created using constructor
 let pet4 = new Pet("Rocky", 4, "Boxer", "Male", "Bath");
 let pet5 = new Pet("Bella", 1, "Poodle", "Female", "Grooming");
 let pet6 = new Pet("Charlie", 6, "Labrador", "Male", "Vet Check");
 
 
-// ✅ Array
+// Array
 let petsList = [pet1, pet2, pet3, pet4, pet5, pet6];
 
 

@@ -4,12 +4,32 @@
 <meta charset="UTF-8">
 <title>Pet Registration</title>
 
-<!-- ✅ Bootstrap -->
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="./styles/darkmode.css">
+<link rel="stylesheet" href="./styles/style.css">
 
 </head>
 
 <body class="container mt-4">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="#">Pet Salon</a>
+
+        <div class="navbar-nav">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="registration.html">Registration</a>
+            <a class="nav-link" href="services.html">Services</a>
+        </div>
+        <button id="darkModeToggle" class="btn btn-outline-light ms-auto">
+    🌙 Dark Mode
+</button>
+
+    </div>
+
+</nav>
 
 <h1 class="text-center">Pet Salon</h1>
 
@@ -47,7 +67,7 @@
 </section>
 
 
-<!-- ✅ Registration Section -->
+<!-- Registration Section -->
 <section class="mt-5">
 
 <h2>Registration</h2>
@@ -95,6 +115,7 @@
 </section>
 
 <script src="./scripts/registration.js"></script>
+<script src="./scripts/darkmode.js"></script>
 
 </body>
 </html>
