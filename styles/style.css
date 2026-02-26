@@ -1,3 +1,10 @@
+.pic {
+  display: flex;
+ 
+  height: 600px;
+  margin-left: 500px;
+}
+
 
 ul {
   list-style-type: none;
